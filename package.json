@@ -1,0 +1,22 @@
+{
+  "name": "kids_away_api",
+  "version": "1.0.0",
+  "description": "backend for final project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PolinaSkrobot/kids_away_api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PolinaSkrobot/kids_away_api/issues"
+  },
+  "homepage": "https://github.com/PolinaSkrobot/kids_away_api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
