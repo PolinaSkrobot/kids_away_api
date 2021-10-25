@@ -14,6 +14,12 @@ db
   })
   .catch(e => console.log(`Error connecting to Postgres server:\n${e}`));;
 
+
+const searchRoutes = require("./routes/search");
+  
+  // Mount all resource routes
+app.use("/searchBabysitters", searchRoutes(db));
+
 app.get('/', function (req, res) {
   res.send('Hello World')
 });
