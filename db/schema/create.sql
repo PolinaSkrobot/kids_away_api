@@ -6,17 +6,20 @@ DROP TABLE IF EXISTS users_age_groups CASCADE;
 DROP TABLE IF EXISTS users_activities CASCADE;
 DROP TABLE IF EXISTS activities CASCADE;
 DROP TABLE IF EXISTS orders CASCADE;
+DROP TABLE IF EXISTS availability CASCADE;
 DROP TABLE IF EXISTS reviews_for_parent CASCADE;
 DROP TABLE IF EXISTS reviews_for_sitter CASCADE;
 DROP TABLE IF EXISTS prices CASCADE;
+DROP TABLE IF EXISTS favourites CASCADE;
 
 CREATE TABLE users (
 	id SERIAL UNIQUE PRIMARY KEY NOT NULL,
 	first_name VARCHAR (50) NOT NULL,
 	last_name VARCHAR (50) NOT NULL,
-	phone VARCHAR (10) NOT NULL,
+	phone VARCHAR (20) NOT NULL,
 	email VARCHAR (255) NOT NULL,
 	password VARCHAR (255) NOT NULL,
+	city VARCHAR (32),
 	address VARCHAR (255),
 	zip VARCHAR (7),
 	babysitter BOOLEAN DEFAULT FALSE,
@@ -29,7 +32,7 @@ CREATE TABLE users (
 
 CREATE TABLE languages (
 	id SERIAL UNIQUE PRIMARY KEY NOT NULL,
-	name VARCHAR (255) NOT NULL
+	language VARCHAR (255) NOT NULL
 );
 
 CREATE TABLE age_groups (
@@ -39,7 +42,7 @@ CREATE TABLE age_groups (
 
 CREATE TABLE activities (
 	id SERIAL UNIQUE PRIMARY KEY NOT NULL,
-	name VARCHAR (255) NOT NULL
+	activity VARCHAR (255) NOT NULL
 );
 
 CREATE TABLE orders (
@@ -50,36 +53,26 @@ CREATE TABLE orders (
 	date DATE NOT NULL,
 	start_time TIME NOT NULL,
 	end_time TIME NOT NULL,
+	hours int,
 	num_of_kids INT NOT NULL,
   address TEXT NOT NULL,
-  contact_phone VARCHAR (10) NOT NULL,
+  contact_phone VARCHAR (20) NOT NULL,
   comment TEXT
 	
 );
 
 CREATE TABLE reviews_for_parent (
 	id SERIAL UNIQUE PRIMARY KEY NOT NULL,
-	sitter_id int REFERENCES users(id) ON DELETE CASCADE,
-	parent_id int REFERENCES users(id) ON DELETE CASCADE,
 	order_id int REFERENCES orders(id) ON DELETE CASCADE,
   comment TEXT NOT NULL, 
-  payment int NOT NULL,
-  on_time int NOT NULL,
-  communication int NOT NULL,
-  average numeric NOT NULL
+  rate int NOT NULL
 );
 
 CREATE TABLE reviews_for_sitter (
 	id SERIAL UNIQUE PRIMARY KEY NOT NULL,
-	sitter_id int REFERENCES users(id) ON DELETE CASCADE,
-	parent_id int REFERENCES users(id) ON DELETE CASCADE,
 	order_id int REFERENCES orders(id) ON DELETE CASCADE,
-  comment TEXT NOT NULL, 
-  on_time int NOT NULL,
-  communication int NOT NULL,
-  fair_price int NOT NULL,
-  good_with_children int NOT NULL,
-  average numeric NOT NULL
+  comment TEXT NOT NULL,
+  rate int NOT NULL
 );
 
 CREATE TABLE prices (
@@ -95,19 +88,35 @@ CREATE TABLE prices (
   threekids_twohours int NOT NULL,
   threekids_threehours int NOT NULL	
 );
+CREATE TABLE availability (
+	id SERIAL UNIQUE PRIMARY KEY NOT NULL,
+	sitter_id INT REFERENCES users(id) ON DELETE CASCADE,
+	date DATE NOT NULL,
+	start_time TIME NOT NULL,
+	end_time TIME NOT NULL,
+	booked BOOLEAN DEFAULT FALSE,
+	order_id INT REFERENCES orders(id) ON DELETE CASCADE 
+
+);
+
+CREATE TABLE favourites (
+	id serial PRIMARY KEY,
+	parent_id INT REFERENCES users(id) ON DELETE CASCADE,
+  sitter_id INT REFERENCES users(id) ON DELETE CASCADE
+);
 
 CREATE TABLE users_languages (
-	PRIMARY KEY(user_id, language_id),
+	id serial PRIMARY KEY,
 	user_id INT REFERENCES users(id) ON DELETE CASCADE,
   language_id INT REFERENCES languages(id) ON DELETE CASCADE
 );
 CREATE TABLE users_age_groups (
-	PRIMARY KEY(user_id, age_group_id),
+	id serial PRIMARY KEY,
 	user_id INT REFERENCES users(id) ON DELETE CASCADE,
   age_group_id INT REFERENCES age_groups(id) ON DELETE CASCADE
 );
 CREATE TABLE users_activities (
-	PRIMARY KEY(user_id, activity_id),
+	id serial PRIMARY KEY,
 	user_id INT REFERENCES users(id) ON DELETE CASCADE,
   activity_id INT REFERENCES activities(id) ON DELETE CASCADE
 );
