@@ -16,11 +16,14 @@ db
 
 
 const searchRoutes = require("./routes/search");
-  
+const mainRoutes = require("./routes/main");
+const favRoutes = require("./routes/favourites");
   // Mount all resource routes
 app.use("/searchBabysitters", searchRoutes(db));
-
-app.get('/', function (req, res) {
-  res.send('Hello World')
-});
+app.use("/", mainRoutes(db));
+app.use("/favourites", favRoutes(db));
+// module.exports=()=>{
+//   app.get('/', (req, res) => {
+//   res.send('Hello World')
+// });}
 app.listen(PORT);
