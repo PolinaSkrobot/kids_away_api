@@ -16,14 +16,17 @@ db
 
 
 const searchRoutes = require("./routes/search");
-const mainRoutes = require("./routes/main");
 const favRoutes = require("./routes/favourites");
+const sitterRoutes = require("./routes/sitterCabinet");
+const profileRoutes = require("./routes/babysitter-profile");
+const mainRoutes = require("./routes/main");
   // Mount all resource routes
 app.use("/searchBabysitters", searchRoutes(db));
-app.use("/", mainRoutes(db));
 app.use("/favourites", favRoutes(db));
-// module.exports=()=>{
-//   app.get('/', (req, res) => {
-//   res.send('Hello World')
-// });}
-app.listen(PORT);
+app.use("/babysitterCabinet", sitterRoutes(db));
+app.use("/babysitter-profile", profileRoutes(db))
+app.use("/", mainRoutes(db));
+
+app.listen(PORT, ()=>{
+  console.log("listening on ", PORT);
+});
