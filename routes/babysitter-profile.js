@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 module.exports = (db) => {
-  router.get("/", (req, res) => {
+  router.get("/:id", (req, res) => {
     const id = req.params.id;
     let user_prof = {};
     let review = [];
@@ -14,13 +14,13 @@ module.exports = (db) => {
       JOIN orders ON users.id = orders.sitter_id
       JOIN prices ON users.id = prices.user_id
       JOIN availability ON users.id = availability.sitter_id
-      WHERE users.id=6 GROUP BY users.id`),
+      WHERE users.id=$1 GROUP BY users.id`, [id]),
 
       db.query(`select reviews_for_sitter.comment, users.first_name as parent_name, reviews_for_sitter.rate
         from reviews_for_sitter
         JOIN orders ON reviews_for_sitter.order_id = orders.id
         JOIN users ON orders.parent_id = users.id
-        WHERE sitter_id = 6`),
+        WHERE sitter_id = $1`, [id]),
     ]).then((data) => {
       user_prof = data[0].rows;
       review = data[1].rows;
