@@ -21,10 +21,10 @@ const sitterRoutes = require("./routes/sitterCabinet");
 const profileRoutes = require("./routes/babysitter-profile");
 const mainRoutes = require("./routes/main");
   // Mount all resource routes
+app.use("/babysitter-profile", profileRoutes(db));
 app.use("/searchBabysitters", searchRoutes(db));
 app.use("/favourites", favRoutes(db));
 app.use("/babysitterCabinet", sitterRoutes(db));
-app.use("/babysitter-profile", profileRoutes(db))
 app.use("/", mainRoutes(db));
 
 app.listen(PORT, ()=>{

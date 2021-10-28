@@ -3,7 +3,9 @@ const router = express.Router();
 
 module.exports = (db) => {
   router.get("/:id", (req, res) => {
-    const id = req.params.id;
+    console.log("I am here");
+    id = req.params.id;
+    console.log("kvfg",id);
     let user_prof = {};
     let review = [];
     Promise.all([
