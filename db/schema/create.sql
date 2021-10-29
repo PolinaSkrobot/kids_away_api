@@ -69,7 +69,7 @@ CREATE TABLE reviews_for_parent (
 );
 
 CREATE TABLE reviews_for_sitter (
-	id SERIAL UNIQUE PRIMARY KEY NOT NULL,
+	id SERIAL UNIQUE,
 	order_id int REFERENCES orders(id) ON DELETE CASCADE,
   comment TEXT NOT NULL,
   rate int NOT NULL
