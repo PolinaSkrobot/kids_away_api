@@ -89,7 +89,7 @@ CREATE TABLE prices (
   threekids_threehours int NOT NULL	
 );
 CREATE TABLE availability (
-	id SERIAL UNIQUE PRIMARY KEY NOT NULL,
+	id SERIAL UNIQUE,
 	sitter_id INT REFERENCES users(id) ON DELETE CASCADE,
 	date DATE NOT NULL,
 	start_time TIME NOT NULL,
