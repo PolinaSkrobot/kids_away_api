@@ -46,7 +46,7 @@ CREATE TABLE activities (
 );
 
 CREATE TABLE orders (
-	id SERIAL UNIQUE PRIMARY KEY NOT NULL,
+	id SERIAL UNIQUE,
 	parent_id int REFERENCES users(id) ON DELETE CASCADE,
   sitter_id int REFERENCES users(id) ON DELETE CASCADE,
 	status TEXT NOT NULL,
