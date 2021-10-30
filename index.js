@@ -21,7 +21,8 @@ const sitterRoutes = require("./routes/sitterCabinet");
 const profileRoutes = require("./routes/babysitter-profile");
 const neworderRoutes = require("./routes/neworder");
 const userRoutes = require("./routes/user-cabinet");
-const newreviewRoutes = require("./routes/newreview");
+const userReviewRoutes = require("./routes/user-review");
+const deleteOrderRoutes = require('./routes/deleteOrder.js')
 const mainRoutes = require("./routes/main");
   // Mount all resource routes
 app.use("/babysitter-profile", profileRoutes(db));
@@ -30,7 +31,8 @@ app.use("/favourites", favRoutes(db));
 app.use("/babysitterCabinet", sitterRoutes(db));
 app.use("/neworder", neworderRoutes(db));
 app.use("/user-cabinet", userRoutes(db));
-app.use("/newreview", newreviewRoutes(db));
+app.use("/user-review", userReviewRoutes(db));
+app.use('/delete-order', deleteOrderRoutes(db))
 app.use("/", mainRoutes(db));
 
 app.listen(PORT, ()=>{
