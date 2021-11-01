@@ -7,7 +7,7 @@ module.exports=(db)=>{
     JOIN favourites ON users.id = favourites.sitter_id
     WHERE parent_id=$1 GROUP BY users.id;`,[req.query.user_id])
       .then((data)=>{
-        //res.cookie("user_id", 1);
+        // res.cookie("user_id", 1);
         res.json(data.rows);
       });  
   });
