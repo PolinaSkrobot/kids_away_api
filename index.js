@@ -23,7 +23,7 @@ const neworderRoutes = require("./routes/neworder");
 const userRoutes = require("./routes/user-cabinet");
 const sitterOrdersRoutes = require("./routes/sitter-cabinet");
 const parentReviewRoutes = require("./routes/parent-review");
-
+const sitterStatusRoutes = require("./routes/sitter-status");
 const userReviewRoutes = require("./routes/user-review");
 const deleteOrderRoutes = require('./routes/deleteOrder.js')
 const mainRoutes = require("./routes/main");
@@ -37,6 +37,8 @@ app.use("/user-cabinet", userRoutes(db));
 app.use("/sitter-cabinet", sitterOrdersRoutes(db));
 app.use("/user-review", userReviewRoutes(db));
 app.use("/parent-review", parentReviewRoutes(db));
+app.use("/sitter-status", sitterStatusRoutes(db));
+
 
 app.use('/delete-order', deleteOrderRoutes(db))
 app.use("/", mainRoutes(db));
