@@ -346,7 +346,58 @@ insert into prices (id, user_id, onekid_onehour, onekid_twohours, onekid_threeho
 insert into prices (id, user_id, onekid_onehour, onekid_twohours, onekid_threehours, twokids_onehour, twokids_twohours, twokids_threehours, threekids_onehour, threekids_twohours, threekids_threehours) values (12, 17, 20, 19, 19, 25, 23, 21, 28, 27, 26);
 insert into prices (id, user_id, onekid_onehour, onekid_twohours, onekid_threehours, twokids_onehour, twokids_twohours, twokids_threehours, threekids_onehour, threekids_twohours, threekids_threehours) values (13, 18, 20, 20, 18, 25, 25, 21, 29, 28, 26);
 
--- insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (6, '2021/11/01', '2021-11-01 14:00:00 -07:00', '2021-11-01 18:00:00 -07:00', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (6, '2021-11-06T07:00:00.000Z', '2021-11-06T14:00:00.000Z', '2021-11-06T19:00:00.000Z', false, null);
+
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (7, '2021-11-01T07:00:00.000Z', '2021-11-01T18:00:00.000Z', '2021-11-01T21:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (7, '2021-11-03T07:00:00.000Z', '2021-11-03T20:00:00.000Z', '2021-11-03T23:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (7, '2021-11-04T07:00:00.000Z', '2021-11-04T20:00:00.000Z', '2021-11-04T23:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (7, '2021-11-06T07:00:00.000Z', '2021-11-06T14:00:00.000Z', '2021-11-06T19:00:00.000Z', false, null);
+
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (8, '2021-11-01T07:00:00.000Z', '2021-11-01T14:00:00.000Z', '2021-11-01T19:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (8, '2021-11-02T07:00:00.000Z', '2021-11-02T14:00:00.000Z', '2021-11-02T19:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (8, '2021-11-03T07:00:00.000Z', '2021-11-03T14:00:00.000Z', '2021-11-03T19:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (8, '2021-11-04T07:00:00.000Z', '2021-11-05T01:00:00.000Z', '2021-11-05T03:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (8, '2021-11-05T07:00:00.000Z', '2021-11-06T01:00:00.000Z', '2021-11-06T04:00:00.000Z', false, null);
+
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (9, '2021-11-01T07:00:00.000Z', '2021-11-01T15:00:00.000Z', '2021-11-01T19:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (9, '2021-11-06T07:00:00.000Z', '2021-11-06T18:00:00.000Z', '2021-11-06T20:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (9, '2021-11-03T07:00:00.000Z', '2021-11-03T14:00:00.000Z', '2021-11-03T19:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (9, '2021-11-04T07:00:00.000Z', '2021-11-05T01:00:00.000Z', '2021-11-05T03:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (9, '2021-11-05T07:00:00.000Z', '2021-11-06T01:00:00.000Z', '2021-11-06T04:00:00.000Z', false, null);
+
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (10, '2021-11-01T07:00:00.000Z', '2021-11-01T21:00:00.000Z', '2021-11-01T23:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (10, '2021-11-06T07:00:00.000Z', '2021-11-06T21:00:00.000Z', '2021-11-06T23:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (10, '2021-11-03T07:00:00.000Z', '2021-11-03T21:00:00.000Z', '2021-11-03T23:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (10, '2021-11-04T07:00:00.000Z', '2021-11-04T21:00:00.000Z', '2021-11-04T23:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (10, '2021-11-05T07:00:00.000Z', '2021-11-05T21:00:00.000Z', '2021-11-05T23:00:00.000Z', false, null);
+
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (11, '2021-11-01T07:00:00.000Z', '2021-11-01T21:00:00.000Z', '2021-11-01T23:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (11, '2021-11-06T07:00:00.000Z', '2021-11-06T21:00:00.000Z', '2021-11-06T23:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (11, '2021-11-03T07:00:00.000Z', '2021-11-03T21:00:00.000Z', '2021-11-03T23:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (11, '2021-11-04T07:00:00.000Z', '2021-11-04T22:00:00.000Z', '2021-11-05T03:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (11, '2021-11-05T07:00:00.000Z', '2021-11-05T21:00:00.000Z', '2021-11-06T02:00:00.000Z', false, null);
+
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (12, '2021-11-04T07:00:00.000Z', '2021-11-04T21:00:00.000Z', '2021-11-04T23:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (12, '2021-11-05T07:00:00.000Z', '2021-11-05T21:00:00.000Z', '2021-11-05T23:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (13, '2021-11-04T07:00:00.000Z', '2021-11-04T22:00:00.000Z', '2021-11-05T01:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (13, '2021-11-05T07:00:00.000Z', '2021-11-05T23:00:00.000Z', '2021-11-06T03:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (14, '2021-11-05T07:00:00.000Z', '2021-11-05T21:00:00.000Z', '2021-11-06T02:00:00.000Z', false, null);
+
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (15, '2021-11-04T07:00:00.000Z', '2021-11-04T21:00:00.000Z', '2021-11-04T23:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (15, '2021-11-05T07:00:00.000Z', '2021-11-05T21:00:00.000Z', '2021-11-05T23:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (15, '2021-11-06T07:00:00.000Z', '2021-11-06T22:00:00.000Z', '2021-11-07T01:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (15, '2021-11-03T07:00:00.000Z', '2021-11-03T23:00:00.000Z', '2021-11-04T03:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (16, '2021-11-05T07:00:00.000Z', '2021-11-05T21:00:00.000Z', '2021-11-06T02:00:00.000Z', false, null);
+
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (17, '2021-11-04T07:00:00.000Z', '2021-11-04T21:00:00.000Z', '2021-11-04T23:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (17, '2021-11-05T07:00:00.000Z', '2021-11-05T21:00:00.000Z', '2021-11-06T01:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (18, '2021-11-06T07:00:00.000Z', '2021-11-06T22:00:00.000Z', '2021-11-07T01:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (18, '2021-11-03T07:00:00.000Z', '2021-11-03T23:00:00.000Z', '2021-11-04T03:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (18, '2021-11-05T07:00:00.000Z', '2021-11-05T21:00:00.000Z', '2021-11-06T02:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (17, '2021-11-05T07:00:00.000Z', '2021-11-05T23:00:00.000Z', '2021-11-06T03:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (11, '2021-11-05T07:00:00.000Z', '2021-11-05T23:00:00.000Z', '2021-11-06T03:00:00.000Z', false, null);
+
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (11, '2021-11-05T07:00:00.000Z', '2021-11-05T20:00:00.000Z', '2021-11-06T01:00:00.000Z', false, null);
 -- insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (6, '2021/10/27', '5:00 PM', '8:00 PM', true, null);
 -- insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (6, '2021/10/28', '3:00 PM', '9:00 PM', true, null);
 -- insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (6, '2021/10/30', '6:00 PM', '8:00 PM', false, null);
