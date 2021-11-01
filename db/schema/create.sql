@@ -62,7 +62,7 @@ CREATE TABLE orders (
 );
 
 CREATE TABLE reviews_for_parent (
-	id SERIAL UNIQUE PRIMARY KEY NOT NULL,
+	id SERIAL UNIQUE,
 	order_id int REFERENCES orders(id) ON DELETE CASCADE,
   comment TEXT NOT NULL, 
   rate int NOT NULL
@@ -92,15 +92,15 @@ CREATE TABLE availability (
 	id SERIAL UNIQUE,
 	sitter_id INT REFERENCES users(id) ON DELETE CASCADE,
 	date DATE NOT NULL,
-	start_time TIME NOT NULL,
-	end_time TIME NOT NULL,
+	start_time timestamptz,
+	end_time timestamptz ,
 	booked BOOLEAN DEFAULT FALSE,
 	order_id INT REFERENCES orders(id) ON DELETE CASCADE 
 
 );
 
 CREATE TABLE favourites (
-	id serial PRIMARY KEY,
+	id SERIAL UNIQUE,
 	parent_id INT REFERENCES users(id) ON DELETE CASCADE,
   sitter_id INT REFERENCES users(id) ON DELETE CASCADE
 );
