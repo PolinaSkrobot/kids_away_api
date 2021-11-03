@@ -3,10 +3,10 @@ const router = express.Router();
 const { startOfWeek, endOfWeek, eachDayOfInterval, add, formatLong } = require ('date-fns');
 
 
- const date = new Date('2021-11-03')
+ const date = new Date()
 // console.log(date);
- const start = startOfWeek(date, {weekStartsOn: 0});
- const end = endOfWeek(date, {weekStartsOn: 0});
+ const start = startOfWeek(date, {weekStartsOn: 1});
+ const end = endOfWeek(date, {weekStartsOn: 1});
 
 module.exports = (db) => {
   // let curr = new Date(); // get current date
