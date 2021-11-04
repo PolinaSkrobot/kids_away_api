@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
-// require("dotenv").config();
-// const accountSid = process.env.ACCOUNT_SID; 
-// const authToken = process.env.AUTH_TOKEN; 
-// const client = require('twilio')(accountSid, authToken); 
+require("dotenv").config();
+const accountSid = process.env.ACCOUNT_SID; 
+const authToken = process.env.AUTH_TOKEN; 
+const client = require('twilio')(accountSid, authToken); 
 
 module.exports=(db)=>{
   router.post("/", (req, res) => {

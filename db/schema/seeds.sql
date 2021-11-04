@@ -368,10 +368,9 @@ insert into availability (sitter_id, date, start_time, end_time, booked, order_i
 
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (8, '2021-11-06T07:00:00.000Z', '2021-11-06T21:00:00.000Z', '2021-11-06T23:00:00.000Z', false, null);
 
-insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (16, '2021-11-06T07:00:00.000Z', '2021-11-06T21:00:00.000Z', '2021-11-07T01:00:00.000Z', false, null);
-insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (17, '2021-11-06T07:00:00.000Z', '2021-11-06T21:00:00.000Z', '2021-11-07T01:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (12, '2021-11-06T07:00:00.000Z', '2021-11-06T21:00:00.000Z', '2021-11-07T01:00:00.000Z', false, null);
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (9, '2021-11-06T07:00:00.000Z', '2021-11-06T21:00:00.000Z', '2021-11-07T00:00:00.000Z', false, null);
-insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (10, '2021-11-06T07:00:00.000Z', '2021-11-06T20:00:00.000Z', '2021-11-07T01:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (12, '2021-11-06T07:00:00.000Z', '2021-11-06T20:00:00.000Z', '2021-11-07T01:00:00.000Z', false, null);
 
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (19, '2021-11-06T07:00:00.000Z', '2021-11-06T20:00:00.000Z', '2021-11-07T01:00:00.000Z', false, null);
 
@@ -508,7 +507,7 @@ insert into users_age_groups (id, user_id, age_group_id) values (4, 16, 3);
 insert into users_age_groups (id, user_id, age_group_id) values (5, 14, 3);
 insert into users_age_groups (id, user_id, age_group_id) values (6, 10, 2);
 insert into users_age_groups (id, user_id, age_group_id) values (10, 8, 2);
-insert into users_age_groups (id, user_id, age_group_id) values (17, 12, 1);
+insert into users_age_groups (id, user_id, age_group_id) values (17, 12, 2);
 insert into users_age_groups (id, user_id, age_group_id) values (18, 12, 3);
 insert into users_age_groups (id, user_id, age_group_id) values (20, 6, 1);
 insert into users_age_groups (id, user_id, age_group_id) values (23, 11, 1);
