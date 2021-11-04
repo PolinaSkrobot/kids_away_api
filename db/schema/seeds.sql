@@ -17,6 +17,8 @@ insert into users (id, first_name, last_name, phone, email, password, city, addr
 insert into users (id, first_name, last_name, phone, email, password, city, address, zip, babysitter, bio, has_first_aid, has_police_check, photo) values (17, 'Kerrin', 'Jerzykiewicz', '+86 724 311 7867', 'kjerzykiewiczs@google.ru', 'adDLsxcP3GFv', 'Port Coquitlam', '7 Dryden Parkway', 'V2U 8H6', true, 'My name is Kerrin, 22 years old. I am a 3rd year student of SFU. I like to do active sports, long walks. I will be glad to play board games with your child, collect puzzles, lego, draw, as well as take a walk. I have a lot of experience looking after children, because I myself come from a large family. I often had to stay with young children, where I was only happy to spend time with them. My love for children pushed me to become a babysitter, as well as the fact that I can easily make friends with any child and find a joint occupation.', true, false, 'https://image.shutterstock.com/image-photo/young-handsome-man-wearing-casual-600w-1696726210.jpg');
 insert into users (id, first_name, last_name, phone, email, password, city, address, zip, babysitter, bio, has_first_aid, has_police_check, photo) values (18, 'Hugo', 'Jozsika', '+81 417 284 8067', 'hjozsikat@reuters.com', 'KgP85f4', 'Port Coquitlam', '79825 Burning Wood Junction', 'V2U 8H6', true, 'My name is Hugo, I am 19 years old, I study at SFU as a teacher of physical culture. I am ready to work with children from 5 years old. There is a younger sister, I have been hanging out with her since I was born. He also had an internship at a children school. I love children. We can play mobile and quiet games with your child, do exercises or do physical education, as well as do modeling and drawing. I work as a baby sitter, as it is a useful experience in communicating with children, a free schedule that does not interfere with my studies.', true, true, 'https://image.shutterstock.com/image-photo/young-african-american-man-wearing-600w-2029465580.jpg');
 
+insert into users (id, first_name, last_name, phone, email, password, city, address, zip, babysitter, bio, has_first_aid, has_police_check, photo) values (19, 'Lucia', 'Hendriks', '+380 456 747 8513', 'mhendriks2@wordpress.com', 'on0qIpeN', 'Port Coquitlam', '0375 Scoville Way', 'V8U 8H6', true, 'My name is Lucia and I am 28 years old. I learned in my late teens that children are my passion. Growing up I baby sat for families in my neighbourhood and during my dance training I was a teachers assistant for 4 years working with kinder dance classes. After graduating I was hired by Dunbar Community Centre to teach dance classes on Saturday mornings. I was working with young children between the ages of 1-7 in these classes. Your children will be my priority. I understand being reliable and having time management is of the utmost importance. I have my own car and am more than willing to drive where I need to go.', true, true, 'https://image.shutterstock.com/image-photo/young-brazilian-woman-wearing-denim-600w-1571927944.jpg');
+
 
 insert into languages (id, language) values (1, 'English');
 insert into languages (id, language) values (2, 'Mandarin');
@@ -24,7 +26,6 @@ insert into languages (id, language) values (3, 'French');
 insert into languages (id, language) values (4, 'Spanish');
 insert into languages (id, language) values (5, 'Farsi');
 insert into languages (id, language) values (6, 'Russian');
-insert into languages (id, language) values (7, 'Punjabi');
 
 insert into age_groups (id, age_group) values (1, 'infants');
 insert into age_groups (id, age_group) values (2, 'toddler');
@@ -114,6 +115,10 @@ insert into orders (parent_id, sitter_id, status, date, start_time, end_time, ho
 insert into orders (parent_id, sitter_id, status, date, start_time, end_time, hours, num_of_kids, address, contact_phone, comment) values (5, 17, 'cancelled', '2021/09/20', '14:00', '16:00', 2, 3, '54 Barby Hill', '479-911-5474', '');
 insert into orders (parent_id, sitter_id, status, date, start_time, end_time, hours, num_of_kids, address, contact_phone, comment) values (2, 16, 'cancelled', '2021/01/25', '12:00', '16:00', 2, 3, '54 Barby Hill', '479-911-5474', '');
 
+insert into orders (parent_id, sitter_id, status, date, start_time, end_time, hours, num_of_kids, address, contact_phone, comment) values (1, 19, 'completed', '2020/08/06', '12:00', '15:00', 3, 2, '7272 Novick Center', '808-209-8029', 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.');
+insert into orders (parent_id, sitter_id, status, date, start_time, end_time, hours, num_of_kids, address, contact_phone, comment) values (3, 19, 'completed', '2021/02/28', '11:00', '12:00', 1, 2, '07 Talmadge Hill', '953-826-2731', 'Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.');
+
+
 insert into orders (parent_id, sitter_id, status, date, start_time, end_time, hours, num_of_kids, address, contact_phone, comment) values (4, 7, 'completed', '2021/09/27', '12:00', '14:00', 2, 1, '3203 Moulton Road', '568-104-6762', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.');
 insert into orders (parent_id, sitter_id, status, date, start_time, end_time, hours, num_of_kids, address, contact_phone, comment) values (2, 11, 'completed', '2021/06/20', '15:00', '18:00', 3, 1, '4 Pawling Center', '817-895-4324', 'Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.');
 insert into orders (parent_id, sitter_id, status, date, start_time, end_time, hours, num_of_kids, address, contact_phone, comment) values (4, 17, 'completed', '2020/09/17', '10:00', '11:00', 1, 1, '263 Redwing Way', '775-876-9795', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum. In hac habitasse platea dictumst.');
@@ -189,6 +194,8 @@ insert into orders (parent_id, sitter_id, status, date, start_time, end_time, ho
 insert into orders (parent_id, sitter_id, status, date, start_time, end_time, hours, num_of_kids, address, contact_phone, comment) values (5, 11, 'cancelled', '2021/04/05', '10:00', '14:00', 2, 3, '54 Barby Hill', '479-911-5474', '');
 insert into orders (parent_id, sitter_id, status, date, start_time, end_time, hours, num_of_kids, address, contact_phone, comment) values (2, 16, 'cancelled', '2021/02/25', '12:00', '16:00', 2, 3, '54 Barby Hill', '479-911-5474', '');
 insert into orders (parent_id, sitter_id, status, date, start_time, end_time, hours, num_of_kids, address, contact_phone, comment) values (5, 17, 'cancelled', '2021/10/20', '14:00', '16:00', 2, 3, '54 Barby Hill', '479-911-5474', '');
+
+insert into orders (parent_id, sitter_id, status, date, start_time, end_time, hours, num_of_kids, address, contact_phone, comment) values (5, 19, 'completed', '2021/10/20', '14:00', '16:00', 2, 3, '54 Barby Hill', '479-911-5474', 'Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.');
 
 insert into reviews_for_parent (order_id, comment, rate) values (1, 'Nulla tempus.', 4);
 insert into reviews_for_parent (order_id, comment, rate) values (2, 'Donec ut dolor.', 4);
@@ -332,6 +339,10 @@ insert into reviews_for_sitter (order_id, comment, rate) values (68, 'Nam nulla.
 insert into reviews_for_sitter (order_id, comment, rate) values (69, 'Aliquam non mauris.', 4);
 insert into reviews_for_sitter (order_id, comment, rate) values (70, 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 4);
 
+insert into reviews_for_sitter (order_id, comment, rate) values (76, 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 4);
+
+insert into reviews_for_sitter (order_id, comment, rate) values (77, 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 5);
+
 insert into prices (id, user_id, onekid_onehour, onekid_twohours, onekid_threehours, twokids_onehour, twokids_twohours, twokids_threehours, threekids_onehour, threekids_twohours, threekids_threehours) values (1, 6, 22, 20, 17, 25, 24, 23, 28, 26, 25);
 insert into prices (id, user_id, onekid_onehour, onekid_twohours, onekid_threehours, twokids_onehour, twokids_twohours, twokids_threehours, threekids_onehour, threekids_twohours, threekids_threehours) values (2, 7, 19, 18, 17, 24, 23, 23, 28, 26, 25);
 insert into prices (id, user_id, onekid_onehour, onekid_twohours, onekid_threehours, twokids_onehour, twokids_twohours, twokids_threehours, threekids_onehour, threekids_twohours, threekids_threehours) values (3, 8, 19, 17, 16, 23, 22, 21, 30, 25, 23);
@@ -346,12 +357,23 @@ insert into prices (id, user_id, onekid_onehour, onekid_twohours, onekid_threeho
 insert into prices (id, user_id, onekid_onehour, onekid_twohours, onekid_threehours, twokids_onehour, twokids_twohours, twokids_threehours, threekids_onehour, threekids_twohours, threekids_threehours) values (12, 17, 20, 19, 19, 25, 23, 21, 28, 27, 26);
 insert into prices (id, user_id, onekid_onehour, onekid_twohours, onekid_threehours, twokids_onehour, twokids_twohours, twokids_threehours, threekids_onehour, threekids_twohours, threekids_threehours) values (13, 18, 20, 20, 18, 25, 25, 21, 29, 28, 26);
 
-insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (6, '2021-11-06T07:00:00.000Z', '2021-11-06T14:00:00.000Z', '2021-11-06T19:00:00.000Z', false, null);
+insert into prices (id, user_id, onekid_onehour, onekid_twohours, onekid_threehours, twokids_onehour, twokids_twohours, twokids_threehours, threekids_onehour, threekids_twohours, threekids_threehours) values (14, 19, 20, 20, 18, 25, 25, 21, 26, 28, 26);
+
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (6, '2021-11-01T07:00:00.000Z', '2021-11-01T14:00:00.000Z', '2021-11-01T19:00:00.000Z', false, null);
 
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (7, '2021-11-01T07:00:00.000Z', '2021-11-01T18:00:00.000Z', '2021-11-01T21:00:00.000Z', false, null);
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (7, '2021-11-03T07:00:00.000Z', '2021-11-03T20:00:00.000Z', '2021-11-03T23:00:00.000Z', false, null);
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (7, '2021-11-04T07:00:00.000Z', '2021-11-04T20:00:00.000Z', '2021-11-04T23:00:00.000Z', false, null);
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (7, '2021-11-06T07:00:00.000Z', '2021-11-06T14:00:00.000Z', '2021-11-06T19:00:00.000Z', false, null);
+
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (8, '2021-11-06T07:00:00.000Z', '2021-11-06T21:00:00.000Z', '2021-11-06T23:00:00.000Z', false, null);
+
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (16, '2021-11-06T07:00:00.000Z', '2021-11-06T21:00:00.000Z', '2021-11-07T01:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (17, '2021-11-06T07:00:00.000Z', '2021-11-06T21:00:00.000Z', '2021-11-07T01:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (9, '2021-11-06T07:00:00.000Z', '2021-11-06T21:00:00.000Z', '2021-11-07T00:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (10, '2021-11-06T07:00:00.000Z', '2021-11-06T20:00:00.000Z', '2021-11-07T01:00:00.000Z', false, null);
+
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (19, '2021-11-06T07:00:00.000Z', '2021-11-06T20:00:00.000Z', '2021-11-07T01:00:00.000Z', false, null);
 
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (8, '2021-11-01T07:00:00.000Z', '2021-11-01T14:00:00.000Z', '2021-11-01T19:00:00.000Z', false, null);
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (8, '2021-11-02T07:00:00.000Z', '2021-11-02T14:00:00.000Z', '2021-11-02T19:00:00.000Z', false, null);
@@ -371,17 +393,19 @@ insert into availability (sitter_id, date, start_time, end_time, booked, order_i
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (10, '2021-11-04T07:00:00.000Z', '2021-11-04T21:00:00.000Z', '2021-11-04T23:00:00.000Z', false, null);
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (10, '2021-11-05T07:00:00.000Z', '2021-11-05T21:00:00.000Z', '2021-11-05T23:00:00.000Z', false, null);
 
-insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (11, '2021-11-01T07:00:00.000Z', '2021-11-01T21:00:00.000Z', '2021-11-01T23:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (11, '2021-11-01T07:00:00.000Z', '2021-11-01T20:00:00.000Z', '2021-11-01T23:00:00.000Z', false, null);
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (11, '2021-11-06T07:00:00.000Z', '2021-11-06T21:00:00.000Z', '2021-11-06T23:00:00.000Z', false, null);
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (11, '2021-11-03T07:00:00.000Z', '2021-11-03T21:00:00.000Z', '2021-11-03T23:00:00.000Z', false, null);
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (11, '2021-11-04T07:00:00.000Z', '2021-11-04T22:00:00.000Z', '2021-11-05T03:00:00.000Z', false, null);
-insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (11, '2021-11-05T07:00:00.000Z', '2021-11-05T21:00:00.000Z', '2021-11-06T02:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (11, '2021-11-05T07:00:00.000Z', '2021-11-05T23:00:00.000Z', '2021-11-06T02:00:00.000Z', false, null);
 
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (12, '2021-11-04T07:00:00.000Z', '2021-11-04T21:00:00.000Z', '2021-11-04T23:00:00.000Z', false, null);
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (12, '2021-11-05T07:00:00.000Z', '2021-11-05T21:00:00.000Z', '2021-11-05T23:00:00.000Z', false, null);
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (13, '2021-11-04T07:00:00.000Z', '2021-11-04T22:00:00.000Z', '2021-11-05T01:00:00.000Z', false, null);
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (13, '2021-11-05T07:00:00.000Z', '2021-11-05T23:00:00.000Z', '2021-11-06T03:00:00.000Z', false, null);
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (14, '2021-11-05T07:00:00.000Z', '2021-11-05T21:00:00.000Z', '2021-11-06T02:00:00.000Z', false, null);
+
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (14, '2021-11-04T07:00:00.000Z', '2021-11-04T23:00:00.000Z', '2021-11-05T02:00:00.000Z', false, null);
 
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (15, '2021-11-04T07:00:00.000Z', '2021-11-04T21:00:00.000Z', '2021-11-04T23:00:00.000Z', false, null);
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (15, '2021-11-05T07:00:00.000Z', '2021-11-05T21:00:00.000Z', '2021-11-05T23:00:00.000Z', false, null);
@@ -396,6 +420,10 @@ insert into availability (sitter_id, date, start_time, end_time, booked, order_i
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (18, '2021-11-05T07:00:00.000Z', '2021-11-05T21:00:00.000Z', '2021-11-06T02:00:00.000Z', false, null);
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (17, '2021-11-05T07:00:00.000Z', '2021-11-05T23:00:00.000Z', '2021-11-06T03:00:00.000Z', false, null);
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (11, '2021-11-05T07:00:00.000Z', '2021-11-05T23:00:00.000Z', '2021-11-06T03:00:00.000Z', false, null);
+
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (19, '2021-11-05T07:00:00.000Z', '2021-11-05T21:00:00.000Z', '2021-11-06T02:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (19, '2021-11-05T07:00:00.000Z', '2021-11-05T23:00:00.000Z', '2021-11-06T03:00:00.000Z', false, null);
+insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (19, '2021-11-05T07:00:00.000Z', '2021-11-05T23:00:00.000Z', '2021-11-06T03:00:00.000Z', false, null);
 
 insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (11, '2021-11-05T07:00:00.000Z', '2021-11-05T20:00:00.000Z', '2021-11-06T01:00:00.000Z', false, null);
 -- insert into availability (sitter_id, date, start_time, end_time, booked, order_id) values (6, '2021/10/27', '5:00 PM', '8:00 PM', true, null);
@@ -437,7 +465,7 @@ insert into users_languages (id, user_id, language_id) values (1, 6, 1);
 insert into users_languages (id, user_id, language_id) values (2, 15, 1);
 insert into users_languages (id, user_id, language_id) values (3, 8, 4);
 insert into users_languages (id, user_id, language_id) values (4, 11, 1);
-insert into users_languages (id, user_id, language_id) values (6, 11, 7);
+insert into users_languages (id, user_id, language_id) values (6, 11, 5);
 insert into users_languages (id, user_id, language_id) values (7, 13, 1);
 insert into users_languages (id, user_id, language_id) values (8, 18, 3);
 insert into users_languages (id, user_id, language_id) values (9, 6, 6);
@@ -468,6 +496,10 @@ insert into users_languages (id, user_id, language_id) values (43, 8, 3);
 insert into users_languages (id, user_id, language_id) values (44, 17, 4);
 insert into users_languages (id, user_id, language_id) values (45, 13, 4);
 
+insert into users_languages (id, user_id, language_id) values (48, 19, 6);
+
+insert into users_languages (id, user_id, language_id) values (49, 19, 1);
+
 
 insert into users_age_groups (id, user_id, age_group_id) values (1, 6, 3);
 insert into users_age_groups (id, user_id, age_group_id) values (2, 8, 3);
@@ -492,6 +524,8 @@ insert into users_age_groups (id, user_id, age_group_id) values (41, 9, 3);
 insert into users_age_groups (id, user_id, age_group_id) values (43, 6, 2);
 insert into users_age_groups (id, user_id, age_group_id) values (44, 18, 3);
 insert into users_age_groups (id, user_id, age_group_id) values (45, 7, 1);
+
+insert into users_age_groups (id, user_id, age_group_id) values (46, 19, 1);
 
 
 insert into users_activities (id, user_id, activity_id) values (1, 11, 1);

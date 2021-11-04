@@ -19,18 +19,18 @@ module.exports=(db)=>{
       console.log("result after insert",result);
       res.send(result.command);
     })
-    // .then(()=>{
+    .then(()=>{
        
-    //   client.messages 
-    //         .create({ 
-    //            body: 'You have a new babysitting invitation, please check your account at KidsAway',  
-    //            messagingServiceSid: process.env.MESS_SERVING_SID,      
-    //            to: process.env.PHONE_NUMBER 
-    //          }) 
-    //         .then(message => console.log(message.sid)) 
-    //         .done();
+      client.messages 
+            .create({ 
+               body: 'You have a new babysitting invitation, please check your account at KidsAway',  
+               messagingServiceSid: process.env.MESS_SERVING_SID,      
+               to: process.env.PHONE_NUMBER 
+             }) 
+            .then(message => console.log(message.sid)) 
+            .done();
 
-    // })  
+    })  
   })
 return router;
 }
