@@ -54,7 +54,7 @@ module.exports = (db) => {
           });
         }
       }
-
+      res.cookie("user_id", 6);
       res.json(arrToPass);
     });
   });
