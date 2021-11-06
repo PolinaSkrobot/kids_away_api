@@ -10,7 +10,7 @@ const db = new Pool(dbParams);
 db
   .connect()
   .then(()=> {
-    console.log('db connected7777');
+    console.log('db connected ✅');
   })
   .catch(e => console.log(`Error connecting to Postgres server:\n${e}`));;
 
@@ -26,7 +26,6 @@ const parentReviewRoutes = require("./routes/parent-review");
 const sitterStatusRoutes = require("./routes/sitter-status");
 const userReviewRoutes = require("./routes/user-review");
 const deleteOrderRoutes = require('./routes/deleteOrder.js')
-const mainRoutes = require("./routes/main");
   // Mount all resource routes
 app.use("/babysitter-profile", profileRoutes(db));
 app.use("/searchBabysitters", searchRoutes(db));
@@ -38,10 +37,7 @@ app.use("/sitter-cabinet", sitterOrdersRoutes(db));
 app.use("/user-review", userReviewRoutes(db));
 app.use("/parent-review", parentReviewRoutes(db));
 app.use("/sitter-status", sitterStatusRoutes(db));
-
-
 app.use('/delete-order', deleteOrderRoutes(db))
-app.use("/", mainRoutes(db));
 
 app.listen(PORT, ()=>{
   console.log("listening on ", PORT);

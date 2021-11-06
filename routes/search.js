@@ -24,25 +24,5 @@ module.exports = (db) => {
       });  
   });
 
-  router.put("/", (req, res) => {
-
-    const data = req.body;
-
-    db.query(
-      `
-      SELECT users.*, array_agg(languages.language::TEXT) AS language FROM users
-      JOIN users_languages ON users.id = users_languages.user_id
-      JOIN languages ON users_languages.language_id = languages.id
-      WHERE babysitter=true GROUP BY users.id;
-      `,
-        [data]
-      )
-      .then((data) => {
-        res.json({ data });
-      })
-      .catch((err) => console.log(err.massage));
-  });
-
-
-  return router;
+   return router;
 };

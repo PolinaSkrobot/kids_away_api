@@ -2,8 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 module.exports=(db)=>{
-  router.get("/", (req, res) => {
-    //console.log("req from user cab", req);   
+  router.get("/", (req, res) => { 
     
       db.query(`SELECT orders.*, users.first_name as sitter_name, users.photo as sitter_photo,
        reviews_for_sitter.comment as comment_about_sitter, reviews_for_sitter.rate as rate
@@ -14,7 +13,6 @@ module.exports=(db)=>{
       ORDER BY orders.id;`)
 
         .then((data)=>{
-        //console.log("get user-cabinet", data.rows)
         res.json(data.rows);
       });  
   });
